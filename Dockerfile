@@ -19,7 +19,7 @@ COPY mysite /opt/app/mysite/
 WORKDIR /opt/app
 RUN pip install -r requirements.txt --cache-dir /opt/app/pip_cache
 RUN chown -R www-data:www-data /opt/app
-ENV PYTHONPATH="$PYTHONPATH:/mysite"
+ENV PYTHONPATH="$PYTHONPATH:/opt"
 
 EXPOSE 8020
 STOPSIGNAL SIGTERM
